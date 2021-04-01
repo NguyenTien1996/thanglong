@@ -10,7 +10,7 @@ const HomePage = () => {
     return(
        <>
            <LayoutComponent>
-               {/* <BannerComponent/> */}
+               <BannerComponent/>
                <ActionUnitsComponent/>
                <AboutUsComponent/>
                <NewsComponent/>
