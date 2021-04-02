@@ -1,10 +1,12 @@
 import React from 'react';
 import LayoutComponent from '../../components/Layout';
-import BannerComponent from '../home/component/banner';
-import ActionUnitsComponent from '../home/component/action_units'
-import AboutUsComponent from '../home/component/about_us'
-import NewsComponent from '../home/component/news'
-import ProjectComponent from '../home/component/project'
+import BannerComponent from '../Home/component/Banner';
+import ActionUnitsComponent from '../Home/component/Action_units';
+import AboutUsComponent from '../Home/component/About_us';
+import NewsComponent from '../Home/component/News';
+import ProjectComponent from '../Home/component/Project';
+import MemberUnitComponent from '../Home/component/Member_units';
+
 
 const HomePage = () => {
     return(
@@ -15,6 +17,7 @@ const HomePage = () => {
                <AboutUsComponent/>
                <NewsComponent/>
                <ProjectComponent/>
+               <MemberUnitComponent/>
            </LayoutComponent>
        </>
     )

@@ -1,3 +1,4 @@
+import './App.css'
 import React,{lazy, Suspense} from 'react';
 import {Skeleton} from 'antd';
 import {
@@ -6,10 +7,11 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import './App.css'
 
 
-const HomeComponent = lazy(() => import('./pages/home/index'));
+
+const HomeComponent = lazy(() => import('./pages/Home/index'));
+const AboutUsComponent = lazy(() => import('./pages/About_us/index'));
 
 function App() {
   return (
@@ -20,6 +22,9 @@ function App() {
         <Switch>
           <Route path="/home">
               <HomeComponent/>
+          </Route>
+          <Route path="/about-us">
+              <AboutUsComponent/>
           </Route>
           <Route exact path="/">
               <HomeComponent/>

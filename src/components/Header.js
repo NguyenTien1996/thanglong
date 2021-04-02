@@ -50,7 +50,7 @@ const HeaderComponent = () => {
                             <a href="#"><img src="images/ic-tc.png" alt="" /></a>
                         </li>
                         <li>
-                            <NavLink to="/">
+                            <NavLink to="/about-us">
                                 Giới thiệu
                             </NavLink>
                         </li>

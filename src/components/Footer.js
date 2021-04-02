@@ -1,4 +1,7 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import {  faFacebookF } from "@fortawesome/free-solid-svg-icons";
+import {  faFacebookF, faTwitter, faInstagram, faYoutube} from '@fortawesome/free-brands-svg-icons';
 
 const FooterComponent = () => {
     return(
@@ -43,14 +46,14 @@ const FooterComponent = () => {
                 </div>
                 <div className="ft-bot">
                     <div className="container">
-                    <p>© 2021 thanglong group. All rights reserved.</p>
-                    <div className="social">
-                        <p>Kết nối với chúng tôi</p>
-                        <a href="#"><i className="fa fa-facebook" /></a>
-                        <a href="#"><i className="fa fa-twitter" /></a>
-                        <a href="#"><i className="fa fa-youtube-play" /></a>
-                        <a href="#"><i className="fa fa-instagram" /></a>
-                    </div>
+                        <p>© 2021 thanglong group. All rights reserved.</p>
+                        <div className="social">
+                            <p>Kết nối với chúng tôi</p>
+                            <a href="#"><FontAwesomeIcon icon={faFacebookF}/></a>
+                            <a href="#"><FontAwesomeIcon icon={faTwitter}/></a>
+                            <a href="#"><FontAwesomeIcon icon={faYoutube}/></a>
+                            <a href="#"><FontAwesomeIcon icon={faInstagram}/></a>
+                        </div>
                     </div>
                 </div>
             </footer>
