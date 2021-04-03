@@ -55,7 +55,7 @@ const HeaderComponent = () => {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/">
+                            <NavLink to="/news">
                                 Tin tức sự kiện
                             </NavLink>
                         </li>

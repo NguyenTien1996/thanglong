@@ -23,7 +23,7 @@ const BannerComponent = (props) => {
                         <img src={props.bannerImage} alt="" />
                     </div>
                     <div className="text">
-                    <h1><a href="#"></a></h1>
+                    <h1><a href="#">{props.name}</a></h1>
                     <div className="div-a">
                         <div 
                             style={{cursor: 'pointer'}}

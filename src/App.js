@@ -8,10 +8,12 @@ import {
   Link
 } from "react-router-dom";
 
+import NewsComponent from './pages/News/index'
 
 
 const HomeComponent = lazy(() => import('./pages/Home/index'));
 const AboutUsComponent = lazy(() => import('./pages/About_us/index'));
+
 
 function App() {
   return (
@@ -26,6 +28,7 @@ function App() {
           <Route path="/about-us">
               <AboutUsComponent/>
           </Route>
+          <Route path="/news" exact component={NewsComponent}></Route>
           <Route exact path="/">
               <HomeComponent/>
           </Route>
