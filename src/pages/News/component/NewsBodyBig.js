@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 const ListNews = (props) => {
 
-    const item  = props.item;
+    const item  = props.firstPost;
     const date = new Date(item.createDate);
     const day = date.getDate()
     const month = date.getMonth() + 1
@@ -20,25 +20,16 @@ const ListNews = (props) => {
                     }}><img src={item.avatar} alt="" />
                 </div>
                 <div className="text">
-                    <span className="timess">{timeStr}</span>
                     <h3><a href=""
                         onClick={()=>{
                             window.scrollTo(0,0); 
-                            props.history.push(`/news/${item.id}`)
+                            props.history.push(`/news/${item._id}`)
                         }}
                     >{item.name}</a></h3>
-                    <p dangerouslySetInnerHTML={{__html: item.content}}></p>
-                    <div
-                        className="see-more"
-                        onClick={()=>{
-                            window.scrollTo(0,0); 
-                            props.history.push(`/news/${item.id}`)
-                        }}
-                    >Chi tiết</div>
                 </div>
             </div>
 
        </>
     )
 }
-export default withRouter(ListNews);
+export default React.memo(ListNews);

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import NewsNavbar from './NewsNavbar';
 import ListNews from './ListNews';
+import NewsBodyPag from './NewsBodyPag';
+import NewsBodyBig from './NewsBodyBig';
 import { withRouter } from 'react-router-dom';
 
 const NewsBody = (props) => {
@@ -21,7 +23,7 @@ const NewsBody = (props) => {
 
     useEffect(() => {
         if (searchNews) {
-            axios.get(`http://pe.heromc.net:4000/news`)
+            axios.get(`https://606a7c88e1c2a100175459e4.mockapi.io/api/news`)
                 .then(res => { 
                     const search = []
                     for (let i in res.data) { 
@@ -39,7 +41,7 @@ const NewsBody = (props) => {
             )
         } else {
             if (props.history.location.pathname === "/news") {
-                axios.get(`http://pe.heromc.net:4000/news`)
+                axios.get(`https://606a7c88e1c2a100175459e4.mockapi.io/api/news`)
                     .then(res => {
                         setNews(res.data)
                     }
@@ -155,6 +157,10 @@ const NewsBody = (props) => {
                 <div className="tct-ct">
                 <h2>tin công ty</h2>
                 <div className="list-tct">
+                    <NewsBodyBig
+                        firstPost = {firstPost}
+                        cateLink = {cateLink}
+                    />
                     {nextPosts.map((item, index) => {
                         return (
                             <ListNews
@@ -170,13 +176,6 @@ const NewsBody = (props) => {
                     pages = {pages}
                     pageNumbers = {pageNumbers}
                 />
-                <div className="ppage">
-                    <a href="#" title className="active">1</a>
-                    <a href="#" title>2</a>
-                    <a href="#" title>3</a>
-                    <a href="#" title><i className="fa fa-angle-right" /></a>
-                    <a href="#" title><i className="fa fa-angle-double-right" /></a>
-                </div>
                 </div>
             </div>
             </section>

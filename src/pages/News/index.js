@@ -16,7 +16,6 @@ const NewsPage = () => {
            <LayoutComponent>
                <BannerComponent  bannerImage={bg} name="Tin tức"/>
                <NewsBody/>
-               <h1>News</h1>
            </LayoutComponent>
        </>
     )
