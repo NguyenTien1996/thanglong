@@ -60,27 +60,27 @@ const HeaderComponent = () => {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/">
+                            <NavLink to="/project">
                             dự án công trình
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/">
+                            <NavLink to="/member">
                             đơn vị thành viên
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/">
+                            <NavLink to="/album">
                             thư viện
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/">
+                            <NavLink to="/recruitment">
                             tuyển dụng
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/">
+                            <NavLink to="/contact">
                             liên hệ
                             </NavLink>
                         </li>

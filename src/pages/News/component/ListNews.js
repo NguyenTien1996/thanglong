@@ -16,7 +16,7 @@ const ListNews = (props) => {
                     className="img" 
                     onClick={()=>{
                         window.scrollTo(0,0); 
-                        props.history.push(`/news/${item.name}`)
+                        props.history.push(`/news/${item.id}`)
                     }}><img src={item.avatar} alt="" />
                 </div>
                 <div className="text">

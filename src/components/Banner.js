@@ -30,7 +30,7 @@ const BannerComponent = (props) => {
                             onClick={()=>{
                                 props.history.push('/')
                             }}
-                        >Trang chủ</div>
+                        >Trang chủ</div>/ 
                         <Link to={locationText}>{props.name}</Link>
                     </div>
                     </div>

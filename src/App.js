@@ -10,6 +10,9 @@ import {
 
 import NewsComponent from './pages/News/index';
 import DetailNewsComponent from './pages/DetailNews/index';
+import ContactComponent from './pages/Contact/index';
+import RecruitmentComponent from './pages/Recruitment/index';
+import AlbumComponent from './pages/Album/index';
 
 
 const HomeComponent = lazy(() => import('./pages/Home/index'));
@@ -31,6 +34,9 @@ function App() {
           </Route>
           <Route path="/news" exact component={NewsComponent}></Route>
           <Route path="/news/:id" exact component={DetailNewsComponent}></Route>
+          <Route path="/contact" exact component={ContactComponent}></Route>
+          <Route path="/recruitment" exact component={RecruitmentComponent}></Route>
+          <Route path="/album" exact component={AlbumComponent}></Route>
           <Route exact path="/">
               <HomeComponent/>
           </Route>

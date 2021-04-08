@@ -12,11 +12,11 @@ export default function NewsContent(props) {
     }
     const cateLink = (`/news/category/${news.name}`)
 
-    const date = new Date(news.newTime)
+    const date = new Date(news.createDate)
     const day = date.getDate()
     const month = date.getMonth() + 1
     const year = date.getFullYear()
-    const timeStr = day + '.' + month + '.' +year
+    const timeStr = day + '/' + month + '/' +year
 
     if (news._id) {
         axios.post(`https://606a7c88e1c2a100175459e4.mockapi.io/api/news/${news.id}`, {
@@ -31,10 +31,8 @@ export default function NewsContent(props) {
                 <div className="left">
                     <div className="detail-news">
                     <h2>{news.name}</h2>
-                    <span className="timess">12/12/2021</span>
-                    <p>Lễ thông xe chính thức cầu Nhật Tân cũng được tổ chức vào 11h trưa cùng ngày. Để ghi lại mối quan hệ hữu nghị Việt - Nhật, cầu sẽ có hai tên gọi là “Nhật Tân” và “Hữu nghị Việt-Nhật”. Công ty cổ phần tập đoàn xây dựng Thăng Long cũng là một trong những đơn vị tham gia xây dựng tuyến đường (gói thầu số 02) đẹp nhất VIệt Nam hiện nay.</p>
-                    <p>Lễ thông xe chính thức cầu Nhật Tân cũng được tổ chức vào 11h trưa cùng ngày. Để ghi lại mối quan hệ hữu nghị Việt - Nhật, cầu sẽ có hai tên gọi là “Nhật Tân” và “Hữu nghị Việt-Nhật”. Công ty cổ phần tập đoàn xây dựng Thăng Long cũng là một trong những đơn vị tham gia xây dựng tuyến đường (gói thầu số 02) đẹp nhất VIệt Nam hiện nay.</p>
-                    like share fb
+                    <span className="timess">{timeStr}</span>
+                    <div className="content-news" dangerouslySetInnerHTML={{__html: news.content}}></div>
                     </div>
                     <div className="ot-news">
                     <p className="name gn">Tin tức khác</p>

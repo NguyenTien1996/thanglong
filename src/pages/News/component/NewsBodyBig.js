@@ -16,14 +16,14 @@ const ListNews = (props) => {
                     className="img" 
                     onClick={()=>{
                         window.scrollTo(0,0); 
-                        props.history.push(`/news/${item.name}`)
+                        props.history.push(`/news/${item.id}`)
                     }}><img src={item.avatar} alt="" />
                 </div>
                 <div className="text">
                     <h3><a href=""
                         onClick={()=>{
                             window.scrollTo(0,0); 
-                            props.history.push(`/news/${item._id}`)
+                            props.history.push(`/news/${item.id}`)
                         }}
                     >{item.name}</a></h3>
                 </div>
@@ -32,4 +32,4 @@ const ListNews = (props) => {
        </>
     )
 }
-export default React.memo(ListNews);
+export default withRouter(ListNews);
