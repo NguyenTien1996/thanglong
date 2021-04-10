@@ -1,4 +1,4 @@
-import './App.css'
+
 import React,{lazy, Suspense} from 'react';
 import {Skeleton} from 'antd';
 import {
@@ -13,6 +13,8 @@ import DetailNewsComponent from './pages/DetailNews/index';
 import ContactComponent from './pages/Contact/index';
 import RecruitmentComponent from './pages/Recruitment/index';
 import AlbumComponent from './pages/Album/index';
+import 'antd/dist/antd.css';
+import './App.css'
 
 
 const HomeComponent = lazy(() => import('./pages/Home/index'));

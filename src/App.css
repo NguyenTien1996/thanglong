@@ -30,7 +30,7 @@ table { border-spacing: 0px; width: 100%; display: table; border-collapse: colla
 .container {width: 100%;padding-right: 15px;padding-left: 15px;margin-right: auto;margin-left: auto;}
 .item .img:hover img{transform:scale(1.1,1.1)}
 .item .img{overflow:hidden;}
-.list-tct .item:first-child .img{height: 402px;}
+.list-tct .item:first-child .img{height: 426px;}
 .list-tct .item .img{overflow:hidden;height: 250px;}
 @media (min-width: 576px) {.container {max-width: 540px;}}
 @media (min-width: 768px) {.container {max-width: 720px;}}
